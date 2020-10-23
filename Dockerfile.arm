@@ -1,0 +1,17 @@
+FROM webhippie/python:latest-arm32v6
+
+LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
+  org.label-schema.name="Molecule" \
+  org.label-schema.vendor="Thomas Boerger" \
+  org.label-schema.schema-version="1.0"
+
+ENTRYPOINT [""]
+
+ENV PY_COLORS=1
+
+RUN apk update && \
+  apk upgrade && \
+  apk add git openssh-client gcc make libffi-dev musl-dev openssl-dev python3-dev && \
+  pip3 install -U pip yamllint testinfra flake8 pycrypto ansible ansible-lint pytest-molecule molecule molecule-hetznercloud molecule-openstack && \
+  apk del gcc make libffi-dev musl-dev openssl-dev python3-dev && \
+  rm -rf /var/cache/apk/*
