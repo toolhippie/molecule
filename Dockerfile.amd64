@@ -8,6 +8,7 @@ LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
 ENTRYPOINT [""]
 
 ENV PY_COLORS=1
+ENV ANSIBLE_FORCE_COLOR=true
 
 RUN apk update && \
   apk upgrade && \
