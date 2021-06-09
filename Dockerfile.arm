@@ -13,6 +13,6 @@ ENV ANSIBLE_FORCE_COLOR=true
 RUN apk update && \
   apk upgrade && \
   apk add git openssh-client gcc make libffi-dev musl-dev openssl-dev python3-dev && \
-  pip3 install -U pip yamllint testinfra flake8 pycrypto ansible ansible-lint pytest-molecule molecule molecule-hetznercloud molecule-openstack && \
+  pip3 install -U pip yamllint testinfra flake8 pycrypto ansible ansible-lint pytest-molecule molecule molecule-hetznercloud molecule-openstack molecule-docker && \
   apk del gcc make libffi-dev musl-dev openssl-dev python3-dev && \
   rm -rf /var/cache/apk/*
