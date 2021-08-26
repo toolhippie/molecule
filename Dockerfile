@@ -13,7 +13,7 @@ ENV MOLECULE_HCLOUD_VERSION=1.2.1
 ENV MOLECULE_OPENSTACK_VERSION=0.3
 
 # renovate: datasource=pypi depName=molecule-docker
-ENV MOLECULE_DOCKER_VERSION=1.0.1
+ENV MOLECULE_DOCKER_VERSION=1.0.2
 
 RUN apk update && \
   apk upgrade && \
