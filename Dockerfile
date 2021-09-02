@@ -7,7 +7,7 @@ ENV ANSIBLE_FORCE_COLOR=true
 ENV MOLECULE_VERSION=3.4.0
 
 # renovate: datasource=pypi depName=molecule-hetznercloud
-ENV MOLECULE_HCLOUD_VERSION=1.2.1
+ENV MOLECULE_HCLOUD_VERSION=1.3.0
 
 # renovate: datasource=pypi depName=molecule-openstack
 ENV MOLECULE_OPENSTACK_VERSION=0.3
