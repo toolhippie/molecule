@@ -20,5 +20,5 @@ RUN apk update && \
   apk add git openssh-client gcc make libffi-dev musl-dev openssl-dev rust cargo && \
   pip3 install -U molecule==${MOLECULE_VERSION} molecule-hetznercloud==${MOLECULE_HCLOUD_VERSION} molecule-openstack==${MOLECULE_OPENSTACK_VERSION} molecule-docker==${MOLECULE_DOCKER_VERSION} pytest-molecule yamllint testinfra flake8 pycrypto ansible ansible-lint && \
   apk del gcc make libffi-dev musl-dev openssl-dev rust cargo && \
-  rm -rf /var/cache/apk/*
+  rm -rf /var/cache/apk/* /root/.cache
 
