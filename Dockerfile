@@ -4,7 +4,7 @@ ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
 # renovate: datasource=pypi depName=molecule
-ENV MOLECULE_VERSION=3.5.1
+ENV MOLECULE_VERSION=3.5.2
 
 # renovate: datasource=pypi depName=molecule-hetznercloud
 ENV MOLECULE_HCLOUD_VERSION=1.3.0
