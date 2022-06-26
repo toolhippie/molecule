@@ -4,7 +4,7 @@ ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
 # renovate: datasource=pypi depName=molecule
-ENV MOLECULE_VERSION=3.6.1
+ENV MOLECULE_VERSION=4.0.0
 
 # renovate: datasource=pypi depName=molecule-docker
 ENV MOLECULE_DOCKER_VERSION=1.1.0
