@@ -3,10 +3,12 @@
     "extends": [
         "github>webhippie/renovate:docker"
     ],
-    "packageRules": [{
-        "groupName": "molecule packages",
-        "matchDatasources": [
-            "pypi"
-        ]
-    }]
+    "packageRules": [
+        {
+            "groupName": "molecule packages",
+            "matchDatasources": [
+                "pypi"
+            ]
+        }
+    ]
 }
