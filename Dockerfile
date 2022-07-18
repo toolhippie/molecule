@@ -7,7 +7,7 @@ ENV ANSIBLE_FORCE_COLOR=true
 ENV MOLECULE_VERSION=4.0.0
 
 # renovate: datasource=pypi depName=molecule-docker
-ENV MOLECULE_DOCKER_VERSION=1.1.0
+ENV MOLECULE_DOCKER_VERSION=2.0.0
 
 RUN apk update && \
   apk upgrade && \
