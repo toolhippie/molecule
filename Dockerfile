@@ -11,7 +11,7 @@ ENV MOLECULE_DOCKER_VERSION=2.1.0
 
 RUN apk update && \
   apk upgrade && \
-  apk add docker python3 python3-dev py3-pip py3-cryptography libffi-dev build-base && \
+  apk add docker python3 python3-dev py3-pip py3-cryptography libffi-dev build-base rust && \
   pip3 install -U molecule==${MOLECULE_VERSION} molecule-docker==${MOLECULE_DOCKER_VERSION} pytest-molecule yamllint testinfra flake8 pycrypto ansible ansible-lint --ignore-installed && \
-  apk del build-base && \
+  apk del build-base rust && \
   rm -rf /var/cache/apk/* /root/.cache
