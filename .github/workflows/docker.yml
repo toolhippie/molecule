@@ -1,7 +1,7 @@
 ---
 name: docker
 
-on:
+"on":
   push:
     branches:
       - master
@@ -24,7 +24,7 @@ jobs:
       - name: Detect version
         id: version
         run: |
-          VER=$(sed -ne "s/^.*MOLECULE_VERSION=\(.*\)/\1/p;" Dockerfile)
+          VER=$(sed -ne "s/^.*MOLECULE_CORE_VERSION=\(.*\)/\1/p;" Dockerfile)
           echo IMAGE_TAG=${VER} >> ${GITHUB_ENV}
           echo "Building ${VER}"
 
@@ -114,5 +114,3 @@ jobs:
           target: quay.io/${{ github.repository }}
           apikey: ${{ secrets.QUAY_APIKEY }}
           readme: README.md
-
-...
