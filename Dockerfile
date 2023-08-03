@@ -7,7 +7,7 @@ ENV ANSIBLE_FORCE_COLOR=true
 ENV MOLECULE_CORE_VERSION=5.1.0
 
 # renovate: datasource=pypi depName=molecule-plugins
-ENV MOLECULE_PLUGINS_VERSION=23.4.1
+ENV MOLECULE_PLUGINS_VERSION=23.5.0
 
 RUN apk update && \
   apk upgrade && \
