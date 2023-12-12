@@ -9,9 +9,12 @@ ENV MOLECULE_CORE_VERSION=6.0.2
 # renovate: datasource=pypi depName=molecule-plugins
 ENV MOLECULE_PLUGINS_VERSION=23.5.0
 
+# renovate: datasource=pypi depName=ansible
+ENV ANSIBLE_CORE_VERSION=9.1.0
+
 RUN apk update && \
   apk upgrade && \
-  apk add docker python3 python3-dev py3-pip py3-cryptography build-base cargo && \
-  CARGO_NET_GIT_FETCH_WITH_CLI=true pip3 install -U molecule==${MOLECULE_CORE_VERSION} molecule-plugins[containers]==${MOLECULE_PLUGINS_VERSION} molecule-plugins[podman]==${MOLECULE_PLUGINS_VERSION} molecule-plugins[docker]==${MOLECULE_PLUGINS_VERSION} pytest-molecule yamllint testinfra flake8 pycrypto ansible ansible-lint && \
-  apk del build-base cargo && \
+  apk add --no-cache bash python3 python3-dev py3-pip build-base openssl-dev libffi-dev cargo && \
+  pip3 install --break-system-packages -U molecule==${MOLECULE_CORE_VERSION} molecule-plugins[containers]==${MOLECULE_PLUGINS_VERSION} molecule-plugins[podman]==${MOLECULE_PLUGINS_VERSION} molecule-plugins[docker]==${MOLECULE_PLUGINS_VERSION} ansible==${ANSIBLE_CORE_VERSION} ansible-lint pytest-molecule yamllint testinfra flake8 pycrypto && \
+  apk del build-base openssl-dev libffi-dev cargo && \
   rm -rf /var/cache/apk/* /root/.cache
