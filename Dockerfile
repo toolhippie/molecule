@@ -7,7 +7,7 @@ ENV ANSIBLE_FORCE_COLOR=true
 ENV MOLECULE_CORE_VERSION=24.12.0
 
 # renovate: datasource=pypi depName=molecule-plugins
-ENV MOLECULE_PLUGINS_VERSION=23.5.3
+ENV MOLECULE_PLUGINS_VERSION=23.6.0
 
 # renovate: datasource=pypi depName=ansible
 ENV ANSIBLE_CORE_VERSION=11.1.0
