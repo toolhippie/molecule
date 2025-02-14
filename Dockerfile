@@ -4,7 +4,7 @@ ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
 # renovate: datasource=pypi depName=molecule
-ENV MOLECULE_CORE_VERSION=24.12.0
+ENV MOLECULE_CORE_VERSION=25.2.0
 
 # renovate: datasource=pypi depName=molecule-plugins
 ENV MOLECULE_PLUGINS_VERSION=23.6.0
