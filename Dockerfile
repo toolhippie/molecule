@@ -10,7 +10,7 @@ ENV MOLECULE_CORE_VERSION=25.3.1
 ENV MOLECULE_PLUGINS_VERSION=23.7.0
 
 # renovate: datasource=pypi depName=ansible
-ENV ANSIBLE_CORE_VERSION=11.3.0
+ENV ANSIBLE_CORE_VERSION=11.4.0
 
 RUN apk update && \
   apk upgrade && \
